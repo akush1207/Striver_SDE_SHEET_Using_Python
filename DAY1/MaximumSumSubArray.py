@@ -9,10 +9,7 @@ def maxsumSubarray(nums:List[int])->int:
         maxSum=max(maxSum,currSum)
     return maxSum
 def main():
-    num=(int(input('Enter the no. of elements:')))
-    nums=[]
-    print('Enter array elements:')
-    for i in range(num):
-        nums.append(int(input()))
+    nums=list(map(int,input('Enter array elements:').split()))
+    print(nums)
     print('Max Profit:',maxsumSubarray(nums))
 main()
