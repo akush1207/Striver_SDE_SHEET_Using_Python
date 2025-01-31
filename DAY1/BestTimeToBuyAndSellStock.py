@@ -9,10 +9,6 @@ def buyAndSellStock(prices:List[int]) -> int:
             maxProfit=max(maxProfit,price-minPrice)            
     return maxProfit
 def main():
-    num=(int(input('Enter the no. of days:')))
-    prices=[]
-    print('Enter prices of each day:')
-    for i in range(num):
-        prices.append(int(input()))
+    prices=list(map(int,input('Enter prices of each day:').split()))
     print('Max Profit:',buyAndSellStock(prices))
 main()
